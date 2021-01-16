@@ -11,7 +11,6 @@ function ProfilePage() {
   const getData = async () => {
     const response = await fetch(`/api/designers/${id}`);
     const data = await response.json();
-    console.log("this is profile", data);
     setProfile(data);
   };
 
