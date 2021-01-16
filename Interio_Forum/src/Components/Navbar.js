@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import image from "../pics/avatar.jpg"
 function Navbar() {
   return (
     <>
@@ -23,6 +24,12 @@ function Navbar() {
               Browse Templates
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/" className="nav-link ml-5">
+              Log Out
+            </Link>
+          </li>
+          <img style={{ position: "absolute", top: "3px", right: "17px", width: "50px",height:"50px",borderRadius:"50%"}} src = {image}/> 
         </ul>
       </nav>
     </>

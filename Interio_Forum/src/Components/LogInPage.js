@@ -1,9 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import Googlelogin from 'react-google-login';
+import Navbar from './Navbar'
 function LogInPage() {
+  const [image,setimage] = useState("");
   const responseGoogle = (response) => {
     console.log(response);
-    localStorage.setItem("UserImage", response);
+    setimage(response.imageURL);
+    sessionStorage.setItem('Users',setimage);
+    return alert('dfgfg')
   }
   return (
     <section id="log-in">

@@ -22,7 +22,7 @@ function ConsultPage() {
           </div>
         </div>
       </div>
-      <DesignerList addClass={"d-flex container flex-wrap"} />
+      <DesignerList addClass={"d-flex justify-content-center flex-wrap"} />
       <Footer />
     </>
   );
