@@ -7,7 +7,10 @@ import Home from "./Components/Home";
 import LogInPage from "./Components/LogInPage";
 import MessageForm from "./Components/MessageForm";
 import ProfilePage from "./Components/ProfilePage";
+import SearchedLocation from "./Components/SearchedLocation";
 import TemplatesPage from "./Components/TemplatesPage";
+import UserNotFound from "./Components/UserNotFound";
+
 function App() {
   return (
     <div>
@@ -23,7 +26,15 @@ function App() {
             <ConsultPage />
           </Route>
           <Route exact path="/template">
-            <TemplatesPage />
+            <TemplatesPage addClass={"d-flex justify-content-center flex-wrap"}/>
+          </Route>
+          <Route
+            exact
+            path="/consult/:locationSearch"
+            children={<SearchedLocation />}
+          ></Route>
+          <Route exact path="/noUser">
+            <UserNotFound />
           </Route>
           <Route exact path="/:id" children={<ProfilePage />}></Route>
           <Route exact path="/:id/message" children={<MessageForm />}></Route>

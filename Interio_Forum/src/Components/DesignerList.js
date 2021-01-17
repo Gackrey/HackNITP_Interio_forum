@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ConsultButton } from "./ButtonsLinks";
-
 import ShowList from "./ShowList";
 
 function DesignerList({ addClass }) {

@@ -1,33 +1,5 @@
-import React, { useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import { VscLocation } from "react-icons/vsc";
-import { Link, useParams } from "react-router-dom";
-function SearchButton(props) {
-  console.log(props);
-  return (
-    <button
-      className="btn btn-info mx-2"
-      onClick={() => console.log("clicked")}
-    >
-      <AiOutlineSearch />
-    </button>
-  );
-}
-export const SearchByLocation = () => {
-  const successCallback = (position) => {
-    console.log(position);
-  };
-  const errorCallback = () => {};
-
-  const handleClick = () => {
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-  };
-  return (
-    <button className="btn-info btn mx-2" onClick={handleClick}>
-      <VscLocation />
-    </button>
-  );
-};
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const TemplateButton = () => {
   return (
@@ -60,5 +32,3 @@ export const ConsultButton = () => {
     </Link>
   );
 };
-
-export default SearchButton;

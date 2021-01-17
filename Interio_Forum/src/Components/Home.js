@@ -10,7 +10,6 @@ function Home() {
     <>
       <Navbar />
       <section className="hero">
-        <SearchBar />
         <div className="main ">
           <div className="row dark-overlay">
             <div className="col offset-1 d-flex flex-column my-5">
@@ -38,7 +37,7 @@ function Home() {
         <div className="d-block text-center my-2">
           <ConsultButton />
         </div>
-        <div className="template-section my-4">
+        <div className="template-section">
           <div className="dark-overlay">
             <div className="col offset-1 d-flex flex-column my-5">
               <h1 className="display-4 text-white d-none d-sm-block">
